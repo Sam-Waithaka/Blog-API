@@ -55,23 +55,53 @@ A fully functional Blog API built with Django and Django Rest Framework (DRF). T
    python manage.py runserver
    ```
 
-6. Access the API at `http://localhost:8000/api/`.
+6. Access the API at `http://localhost:8000/api/v1/`.
+
+# CORS Configuration
+
+This project supports CORS to allow frontend applications running on different origins to interact with the API. The following origins are whitelisted:
+
+- `http://localhost:3000`
+- `http://localhost:8000`
+
+To modify or add additional origins, update the `CORS_ALLOWED_ORIGINS` in the `settings.py` file.
+
+## CSRF Trusted Origins
+
+For secure cross-origin requests, the following origins are included in the `CSRF_TRUSTED_ORIGINS`:
+
+- `http://localhost:3000`
+- `http://localhost:8000`
+
+This ensures that CSRF protection is correctly applied for these origins.
 
 ## API Endpoints
 
-- **Users**
-  - `POST /api/users/` - Create a new user
-  - `GET /api/users/` - List all users
-  - `GET /api/users/{id}/` - Retrieve a specific user
-  - `PUT /api/users/{id}/` - Update a user
-  - `DELETE /api/users/{id}/` - Delete a user
+- List and create posts: `GET /api/v1/`, `POST /api/v1/`
+- Retrieve, update, and delete a post: `GET /api/v1/<id>/`, `PUT /api/v1/<id>/`, `DELETE /api/v1/<id>/`
 
-- **Blog Posts**
-  - `POST /api/posts/` - Create a new blog post
-  - `GET /api/posts/` - List all blog posts
-  - `GET /api/posts/{id}/` - Retrieve a specific blog post
-  - `PUT /api/posts/{id}/` - Update a blog post
-  - `DELETE /api/posts/{id}/` - Delete a blog post
+## Testing
+
+Run the tests using:
+```bash
+python manage.py test
+
+
+# ## API Endpoints
+
+# - **Users**
+#   - `POST /api/users/` - Create a new user
+#   - `GET /api/users/` - List all users
+#   - `GET /api/users/{id}/` - Retrieve a specific user
+#   - `PUT /api/users/{id}/` - Update a user
+#   - `DELETE /api/users/{id}/` - Delete a user
+
+# - **Blog Posts**
+#   - `POST /api/posts/` - Create a new blog post
+#   - `GET /api/posts/` - List all blog posts
+#   - `GET /api/posts/{id}/` - Retrieve a specific blog post
+#   - `PUT /api/posts/{id}/` - Update a blog post
+#   - `DELETE /api/posts/{id}/` - Delete a blog post
 
 ## Documentation
 

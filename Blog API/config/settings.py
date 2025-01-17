@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     #Third Party Apps
     'rest_framework',
     'corsheaders',
+    'rest_framework.authtoken',
 
     #Local Apps
     'accounts.apps.AccountsConfig',
@@ -136,6 +137,10 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES':[
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
     ]
 }
 

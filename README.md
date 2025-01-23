@@ -87,21 +87,19 @@ Run the tests using:
 python manage.py test
 
 
-# ## API Endpoints
+## API Endpoints
 
-# - **Users**
-#   - `POST /api/users/` - Create a new user
-#   - `GET /api/users/` - List all users
-#   - `GET /api/users/{id}/` - Retrieve a specific user
-#   - `PUT /api/users/{id}/` - Update a user
-#   - `DELETE /api/users/{id}/` - Delete a user
+### Posts
+- `GET /api/v1/` - List all posts
+- `GET /api/v1/<id>/` - Retrieve a specific post
 
-# - **Blog Posts**
-#   - `POST /api/posts/` - Create a new blog post
-#   - `GET /api/posts/` - List all blog posts
-#   - `GET /api/posts/{id}/` - Retrieve a specific blog post
-#   - `PUT /api/posts/{id}/` - Update a blog post
-#   - `DELETE /api/posts/{id}/` - Delete a blog post
+### Authentication and User Management
+- `POST /api/v1/rest-auth/registration/` - Register a new user
+- `POST /api/v1/rest-auth/login/` - Log in a user
+- `GET /api/v1/rest-auth/logout/` - Log out a user
+- `POST /api/v1/rest-auth/password/reset/` - Request a password reset
+- `POST /api/v1/rest-auth/password/reset/confirm/` - Confirm a password reset
+
 
 ## Documentation
 
@@ -123,4 +121,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For any inquiries or support, please contact [your email address].
+For any inquiries or support, please contact developersam.w@gmail.com

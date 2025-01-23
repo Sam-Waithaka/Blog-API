@@ -93,12 +93,20 @@ python manage.py test
 - `GET /api/v1/` - List all posts
 - `GET /api/v1/<id>/` - Retrieve a specific post
 
+### Users
+- `GET /api/v1/users/` - List all users
+- `POST /api/v1/users/` - Create a new user
+- `GET /api/v1/users/<id>/` - Retrieve a specific user
+- `PUT /api/v1/users/<id>/` - Update a specific user
+- `DELETE /api/v1/users/<id>/` - Delete a specific user
+
 ### Authentication and User Management
 - `POST /api/v1/rest-auth/registration/` - Register a new user
 - `POST /api/v1/rest-auth/login/` - Log in a user
 - `GET /api/v1/rest-auth/logout/` - Log out a user
 - `POST /api/v1/rest-auth/password/reset/` - Request a password reset
 - `POST /api/v1/rest-auth/password/reset/confirm/` - Confirm a password reset
+
 
 
 ## Documentation

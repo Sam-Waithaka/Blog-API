@@ -85,6 +85,7 @@ This ensures that CSRF protection is correctly applied for these origins.
 Run the tests using:
 ```bash
 python manage.py test
+```
 
 
 ## API Endpoints
